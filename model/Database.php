@@ -44,7 +44,19 @@ class Database {
             return false;
         }
        }
-       
-   }
+    public function creerEvenement(Evenement $evenement){
+          
+          if (!is_dir("../evenement/")) {
+                mkdir("../evenement/");
+        }
+        $event = fopen("../evenement/" . $evenement->getNom() . ".txt", "w");
+        fwrite($evenement, serialize($event));
+            //on ferme le fichier
+            fclose($event);
+      } 
+    
+}
+      
+
 
 
