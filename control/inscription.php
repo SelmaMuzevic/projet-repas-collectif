@@ -17,7 +17,7 @@ function recupererForm() {
         $mdp = md5($_POST['mdp']);
 
         $utilisateur = new Utilisateur($pseudo, $mdp);
-        var_dump($utilisateur);
+        
         // Sauvgarder le pseudo et le mot de passe dans une session
         $_SESSION['pseudo'] = $pseudo;
         $_SESSION['mdp'] = $mdp;
@@ -27,5 +27,7 @@ function recupererForm() {
         
         echo "Félicitation, vous vous êtes inscrit(e) avec succès !";
     }
+    
 }
 recupererForm();
+echo '<a href="../vue/index.html">Retour a l\'accueil</a><br/>';

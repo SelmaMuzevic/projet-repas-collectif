@@ -24,14 +24,16 @@ function recupererForm() {
    
     }else{
         $pseudo = $_POST['pseudo'];
-        $mdp = $_POST['mdp'];
+        $mdp = md5($_POST['mdp']);
         
-        $utilisateur = new Utilisateur($pseudo, $mdp);
-        // Sauvgarder le pseudo et le mot de passe dans une session
-        $_SESSION['pseudo'] = $pseudo;
-        $_SESSION['mdp'] = md5($mdp);
-       
-        echo "<p>Bienvenue dans votre espace membre !</p>";
+     if($database->recupererUtilisateur($pseudo, $mdp)){
+              echo "<p>Bonjour ! Bienvenue dans votre espace membre !</p>";
+     }  else{
+         echo 'Erreur de connexion';
+     }
+        
+ 
     }
 }
 recupererForm();
+echo '<a href="../vue/index.html">Retour a l\'accueil</a><br/>';
