@@ -12,23 +12,31 @@ Page inscription
         
         <h1>Veuillez vous inscrire : </h1>
         
-        <form action="" method="POST">
+        <form action="../control/inscription.php" method="POST">
             <label for="nom">Votre nom :</label>
-            <input type="text" name="nom" id="nom" /><br />
+            <input type="text" name="nom" id="nom" required/><br />
+            
             <label for="prenom">Votre prenom :</label>
-            <input type="text" name="prenom" id="prenom" /><br />
+            <input type="text" name="prenom" id="prenom" required/><br />
+            
             <label for="pseudo">Pseudo :</label>
-            <input type="text" name="pseudo" id="pseudo" /><br />
+            <input type="text" name="pseudo" id="pseudo" required /><br />
+            
             <label for="adresse">Votre adresse :</label>
-            <input type="text" name="adresse" id="adresse" /><br />
+            <input type="text" name="adresse" id="adresse" required/><br />
+            
             <label for="email">Votre adresse e-mail :</label>
-            <input type="text" name="email" id="email" /><br />
-            <label for="pass">Mot de passe :</label>
-            <input type="password" name="pass" id="pass" /><br />
+            <input type="text" name="email" id="email" required/><br />
+            
+            <label for="mdp">Mot de passe :</label>
+            <input type="password" name="mdp" id="mdp" required /><br />
+            
             <label for="pass-confirm">Confirmation mot de passe :</label>
-            <input type="password" name="pass-confirm" id="pass-confirm" /><br />
+            <input type="password" name="pass-confirm" id="pass-confirm" required /><br />
    
             <input type="submit" name="inscription" value="inscription">
+            
+            
         </form>
     </body>
 </html>

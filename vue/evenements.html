@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Des Evenements</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h1>Test Evenemets</h1>
+        <form method ="POST" action="../control/events.php">
+            
+            <label for="nom">Nom :</label>
+            <input type="text" name="nom" id="nom" required/><br />
+            
+            <label for="type">Type :</label>
+            <input type="text" name="type" id="type" required/><br />
+            
+            <label for="dateTime">La Date :</label>
+            <input type="text" name="datetime" id="dateTime" required/><br />
+            
+            <label for="lieu">Le Lieu :</label>
+            <input type="text" name="lieu" id="lieu" required/><br />
+            
+            <label for="adresse">Adresse :</label>
+            <input type="text" name="adresse" id="adresse" required/><br />
+     
+            <input type="submit" name="validation" value="valider"><br />
+            <input type="submit" name="modification" value="modifier"><br />
+            <input type="submit" name="suppression" value="supprimer"><br />
+            
+        </form>
+    </body>
+</html>

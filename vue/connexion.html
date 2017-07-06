@@ -10,12 +10,12 @@ Page connexion
     </head>
     <body>
         <h1>Connectez-vous : </h1>
-        <form action="" method="POST">
+        <form action="../control/connexion.php" method="POST">
             <label for="pseudo">Pseudo :</label>
-            <input type="text" name="pseudo" id="pseudo" /><br />
+            <input type="text" name="pseudo" id="pseudo" required /><br />
            
-            <label for="pass">Mot de passe :</label>
-            <input type="password" name="pass" id="pass" /><br />
+            <label for="mdp">Mot de passe :</label>
+            <input type="password" name="mdp" id="mdp" required /><br />
    
             <input type="submit" name="connexion" value="connexion">
         </form>
