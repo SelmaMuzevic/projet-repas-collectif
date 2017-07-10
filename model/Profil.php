@@ -12,5 +12,10 @@
  * @author selma
  */
 class Profil {
-    //put your code here
+    private $nom;
+    
+    public function __contruct(){
+        $this->nom = $nom;
+    }
 }
+
