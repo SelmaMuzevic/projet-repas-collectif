@@ -5,7 +5,7 @@ $dossier_evenement = scandir('../evenement');
 foreach($dossier_evenement as $evenement){
     if(is_dir($evenement)){ continue; }
     
-    $evenement = unserialize (file_get_contents('../evenement/' .$evenement));
+$evenement = unserialize (file_get_contents('../evenement/' .$evenement));
 ?>
 <h3><?php echo $evenement->getNom(); ?></h3>
 <p><?php echo $evenement->getType(); ?></p>

@@ -27,12 +27,17 @@ Page connexion
         <h1 id="title" class="col-sm-6 col-sm-offset-4">Connectez-vous : </h1>
         </header>
         <form action="connexion.php" method="POST">
+            
+            <div class="form-group">
             <input type="hidden" value="blabla" name="connect"/>
             <label for="pseudo">Pseudo :</label>
-            <input type="text" name="pseudo" id="pseudo" required /><br />
-           
+            <input class="form-control" type="text" name="pseudo" id="pseudo" required /><br />
+            </div>
+            
+            <div class="form-group">
             <label for="mdp">Mot de passe :</label>
-            <input type="password" name="mdp" id="mdp" required /><br />
+            <input class="form-control" type="password" name="mdp" id="mdp" required /><br />
+            </div>
    
             <input type="submit" name="connexion" value="connexion">
         </form>
