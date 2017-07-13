@@ -1,5 +1,5 @@
 <?php
-
+// La partie de la page, traitement des donnees
 session_start();
 
 include_once '../model/Utilisateur.php';

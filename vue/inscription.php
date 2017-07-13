@@ -43,6 +43,17 @@ Page inscription
         <link rel="stylesheet" href="inscription.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+        <style>
+          .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 50px;
+    background-color: #ff9933;
+
+}  
+        </style>
     </head>
     <body class="container">
             <div class="top">

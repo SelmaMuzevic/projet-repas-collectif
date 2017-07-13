@@ -3,16 +3,28 @@
 
 <html>
     <head>
-        <title>Des Evenements</title>
-        <link rel="stylesheet" href="events.css" />
+        <title>Create Evenement</title>
+        <link rel="stylesheet" href="" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+        <style>
+            .event{
+    
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 50px;
+    background-color: #996600;
+}
+        </style>    
     </head>
     <body class="container">
         <div class="event">
         <header class="row">
-        <h1 id="title" class="col-sm-6 col-sm-offset-4">Test Evenemets</h1>
+        <h1 id="title" class="col-sm-6 col-sm-offset-4">Create Evenemets</h1>
         </header>
        
             <form method ="POST" action="affiche-evenements.php">
