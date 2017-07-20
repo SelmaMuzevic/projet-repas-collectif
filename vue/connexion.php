@@ -10,7 +10,6 @@ if(!empty($_POST['connect']) && $_POST['connect'] == 'blabla'){
 $connexion->recupererForm($_POST['pseudo'], $_POST['mdp']);
 
 }
-
 ?><!DOCTYPE html>
 <!--
 Page connexion

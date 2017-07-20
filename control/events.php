@@ -1,20 +1,11 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 include_once '../model/Evenement.php';
 include_once '../model/Database.php';
 
 session_start();
 
-
 $data = new Database();
-
 
 
 if (!empty($_POST['nom']) && !empty($_POST['type']) && !empty($_POST['dateTime']) && !empty($_POST['lieu']) && !empty($_POST['adresse'])) {
@@ -36,8 +27,5 @@ if (!empty($_POST['nom']) && !empty($_POST['type']) && !empty($_POST['dateTime']
 } else {
     echo 'Faut remplir tous les champs !!!!';
 }
-
-
-
-
+?>
 

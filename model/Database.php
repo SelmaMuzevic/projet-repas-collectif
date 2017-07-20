@@ -1,6 +1,67 @@
 <?php
 
-/*
+include_once "Utilisateur.php";
+include_once 'Evenement.php';
+
+//$event = new Evenement();
+
+class Database {
+    
+    //Créer un utilisateur 
+    function creeUtilisateur(Utilisateur $utilisateur) {
+        
+        //Crée un dossier si il n'existe pas.
+        if (!is_dir("../control/utilisateur")) {
+            mkdir("../control/utilisateur");
+        }
+        //user->getPseudo() va chercher le pseudo que l'on a conserver.
+        $new_file = fopen("../control/utilisateur/" . $utilisateur->getPseudo() . ".txt", "w");
+        //Serialize transforme les données sous donné binaire pour en faire ce que l'on veut.
+        fwrite($new_file, serialize($utilisateur));
+        //Je referme mon fichier.
+        fclose($new_file);
+        return true;
+    }
+
+    //Lecture de l'utilisateur unserialize. 
+    function lireUtilisateur($utilisateur) {
+        if (is_file('utilisateur/' . $utilisateur . '.txt')) {
+            return unserialize(file_get_contents('utilisateur/' . $utilisateur . '.txt'));
+        }
+        return false;
+    }
+
+    //crée des evenements  
+    function creerEvents(Events $evenement) {
+        //echo dateTime();
+        if (!is_dir("../control/events")) {
+            mkdir("../control/events");
+        }
+        //user->getPseudo() va chercher le pseudo que l'on a conserver.
+        $new_event = fopen("../control/events/" . $evenement->getName() . ".txt", "w");
+        fwrite($new_event, serialize($evenement));
+        fclose($new_event);
+        return true;
+    }
+    
+    //prend simplement les fichier et les place dans un tableau.
+    function lireEvents() {
+        //tab
+        $evenement = [];
+        $scan = scandir("../control/events/");
+        foreach($scan as $file) {
+            if(!is_dir("../control/events/" . $file)) {
+                $evenements = unserialize(file_get_contents("../control/events/" . $file));
+                //Placer dans un a tab.
+                $evenements[] = $evenement;
+            }
+        }
+        return $evenement;
+    }
+}
+
+
+
 
 
   /**
@@ -11,7 +72,7 @@
 
 
 
-class Database {
+/*class Database {
 
     public function creerUtilisateur(Utilisateur $utilisateur) {
 
@@ -63,9 +124,23 @@ class Database {
         //on ferme le fichier
         fclose($file);
     }
+    //Faire la méthode recupererEvenements
     public function RecupererEvenement(){
+        //Créer un tableau vide
+        $evenement = [];
+        //Faire le scandir
+        $file = scandir('../evenement');
+        //faire la boucle sur chaque fichier
+        foreach($file as $evenement){
+            echo $evenement;
+        }
+        //Pour chaque fichier on unserialize et on ajoute le résultat
+        //au tableau créé au début
         $evenement = unserialize(file_get_contents('../evenement/' . time() . '.txt'));
 	
+        
+        //tout à la fin de la méthode, on fait un return du tableau
+        return $file;
     }
     
     function recupererForm($pseudo, $mdp) {
@@ -91,12 +166,9 @@ class Database {
             }
         }
     }
-}
-
-
-
     
-
+}
+*/
     //Créer une méthode recupererEvenement sans argument qui fera un
     //scandir du dossier ../evenement puis qui fera une boucle (foreach)
     //sur le contenu de ce dossier et qui, pour chaque fichier,

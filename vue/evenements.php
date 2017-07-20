@@ -1,5 +1,7 @@
 
-<!DOCTYPE html>
+<?php
+
+?><!DOCTYPE html>
 
 <html>
     <head>
@@ -21,7 +23,13 @@
 }
         </style>    
     </head>
+    
     <body class="container">
+        <style>
+            body{
+                background-color: black;color: lime;
+            }
+        </style>
         <div class="event">
         <header class="row">
         <h1 id="title" class="col-sm-6 col-sm-offset-4">Create Evenemets</h1>
@@ -42,11 +50,33 @@
             <input class="form-control" type="text" name="type" id="type" required/><br />
             </div>
             </div>
+                
+            <div class="form-group">
+            <div class="col-sm-4 col-sm-offset-3">
+            <select class="form-control" id="nameType" name="nameType">
+                <option value="japonnais" name="optionJapponnais">Japonnais</option>
+                <option value="Pizza" name="optionPizza">Pizza</option>
+                <option value="Burger" name="optionBurger">Burger</option>
+                <option value="Indien-Pakistanais" name="optionIndienPakistannais">Indien-Pakistanais</option>
+                <option value="Chinois" name="optionChinois">Chinois</option>
+                <option value="Touche personnel" name="optionTouchePersonnel">Touche personnel</option>
+                <option value="Spécialité" name="optionSpecialiter">Spécialité</option>
+                <option value="Oriental" name="optionOriental">Oriental</option>
+            </select>
+            </div>
+            </div>
             
             <div class="form-group">
             <div class="col-sm-4 col-sm-offset-3">
             <label for="dateTime">La Date :</label>
             <input class="form-control" type="text" name="dateTime" id="dateTime" required/><br />
+            </div>
+            </div>
+                           
+            <div class="form-group">
+            <div class="col-sm-4 col-sm-offset-3">    
+            <label for='numberPersonne'>Nombre de personne inviter</label>
+            <input class="form-control" type='number' id='numberPersonne' name='numberPersonne'/>
             </div>
             </div>
             
@@ -69,7 +99,4 @@
         </div>
     </body>
 </html>
-
-
-
 

@@ -1,16 +1,4 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Evenement
- *
- * @author selma
- */
 class Evenement {
     
     private $nom;
@@ -49,4 +37,11 @@ class Evenement {
         return $this->adresse;
 
     }
+
+function displayEvent() {
+        return '<div>' . $this->nom . '</div>'. '<div>' . $this->type . '</div>'. '<div>' . $this->dateTime . '</div>'
+                . '<div>' . $this->lieu . '</div>'. '<div>' . $this->adresse . '</div>' . '<div>' ;
+                
+    }
 }
+
