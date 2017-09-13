@@ -12,10 +12,7 @@ include_once '../model/Database.php';
 
 session_start();
 
-
-$data = new Database();
-
-
+$data = new Database('dbh');
 
 if (!empty($_POST['nom']) && !empty($_POST['type']) && !empty($_POST['dateTime']) && !empty($_POST['lieu']) && !empty($_POST['adresse'])) {
 

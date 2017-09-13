@@ -12,19 +12,11 @@ include_once '../model/Utilisateur.php';
 function recupererForm() {
         $database = new Database();
 
-    if (isset($_POST['pseudo']) && isset($_POST['mdp'])) {
-        $pseudo = $_POST['pseudo'];
-        $mdp = md5($_POST['mdp']);
-
-        $utilisateur = new Utilisateur($pseudo, $mdp);
-        
-        // Sauvgarder le pseudo et le mot de passe dans une session
-        $_SESSION['pseudo'] = $pseudo;
-        $_SESSION['mdp'] = $mdp;
-        
-        // on a utilisé une function de la classe Database
-        $database->creerUtilisateur($utilisateur);
-        
+   if (!empty($_POST['pseudo']) && !empty($_POST['mdp'])) {
+        // pour proteger le code pour eviter les injection de code de l'exterieur
+        $post = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
+   $user = new Utilisateur($post['nom'], $post['prenom'], 
+           $post['pseudo'], $post['adresse'], $post['email'], $post['mdp']);
         echo "Félicitation, vous vous êtes inscrit(e) avec succès !";
     }
     

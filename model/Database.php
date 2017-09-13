@@ -1,8 +1,4 @@
 <?php
-
-/*
-
-
   /**
  * Description of Database
  *
@@ -13,21 +9,28 @@
 
 class Database {
 
+    private $dbh;
+    
+    public function __construct($dbh) {
+        $this->dbh = new PDO('mysql:host=localhost;dbname=repas_collectif', 'selma', 'ppp');
+    }
+
     public function creerUtilisateur(Utilisateur $utilisateur) {
+        $this->dbh->prepare('INSERT INTO repas_collectif '
+                 . '(nom, prenom, pseudo, adresse, email, mdp) ' 
+                           . 'VALUES (:nom,:prenom,:pseudo,:adresse,:email,:mdp)');
 
-        // On verifie si le dossier utilisateur existe dêjà 
-        if (!is_dir("../utilisateur/")) {
-            //sinon on le crée
-            mkdir("../utilisateur/");
-        }
+$this->dbh->bindValue('nom', $prenom, PDO::PARAM_STR);
+$this->dbh->bindValue('prenom', $prenom, PDO::PARAM_STR);
+$this->dbh->bindValue('pseudo', $pseudo, PDO::PARAM_STR);
+$this->dbh->bindValue('adresse', $adresse, PDO::PARAM_STR);
+$this->dbh->bindValue('email', $email, PDO::PARAM_STR);
+$this->dbh->bindValue('mdp', $mdp, PDO::PARAM_STR);
 
-        //On crée un nouveau fichier pour l'utilisateur
-        $new_file = fopen("../utilisateur/" . $utilisateur->getPseudo() . ".txt", "w");
 
-        // On le serialize
-        fwrite($new_file, serialize($utilisateur));
-        //on ferme le fichier
-        fclose($new_file);
+// on execute la requete 
+$this->dbh->execute();
+
     }
 
     public function recupererUtilisateur($pseudo, $mdp) {

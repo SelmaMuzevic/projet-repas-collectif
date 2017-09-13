@@ -21,8 +21,29 @@ Page connexion
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+        <style>
+            
+            .container{
+                margin-top: 100px;
+                background-color: lightsalmon;
+            }
+            .connect{
+                border-radius: 40px;
+                height: 40%;
+                width: 40%;  
+                padding: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: auto;
+                background-color: lightgrey;
+            }
+            
+        </style>
+    
     </head>
     <body class="container">
+        <div class="connect">
         <header class="row">
         <h1 id="title" class="col-sm-6 col-sm-offset-4">Connectez-vous : </h1>
         </header>
@@ -41,5 +62,6 @@ Page connexion
    
             <input type="submit" name="connexion" value="connexion">
         </form>
+        </div>
     </body>
 </html>
