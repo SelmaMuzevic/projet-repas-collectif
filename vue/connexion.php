@@ -6,8 +6,9 @@ include_once '../model/Utilisateur.php';
 include_once '../model/Database.php';
 
 if(!empty($_POST['connect']) && $_POST['connect'] == 'blabla'){
-    $connexion = new Database();
-$connexion->recupererForm($_POST['pseudo'], $_POST['mdp']);
+
+$data = new Database();
+$data->recupererForm($_POST['pseudo'], $_POST['mdp']);
 
 }
 

@@ -8,9 +8,9 @@
 include_once '../model/Utilisateur.php';
 include_once '../model/Database.php';
 
-$database = new Database();
+$data = new Database();
 
-$personne = $database->recupererUtilisateur("selma");
+$personne = $data->recupererUtilisateur("selma");
 var_dump($personne);
 echo "<p>Bonjour " .$personne->getPseudo()."</p>";
 

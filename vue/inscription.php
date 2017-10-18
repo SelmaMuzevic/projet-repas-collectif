@@ -10,14 +10,19 @@ include_once '../model/Database.php';
 include_once '../model/Utilisateur.php';
 
 function recupererForm() {
-        $database = new Database();
-
+        
    if (!empty($_POST['pseudo']) && !empty($_POST['mdp'])) {
-        // pour proteger le code pour eviter les injection de code de l'exterieur
-        $post = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
-   $user = new Utilisateur($post['nom'], $post['prenom'], 
-           $post['pseudo'], $post['adresse'], $post['email'], $post['mdp']);
-        echo "Félicitation, vous vous êtes inscrit(e) avec succès !";
+    $database = new Database();
+
+    // pour proteger le code pour eviter les injection de code de l'exterieur
+    $post = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
+    $user = new Utilisateur($post['nom'], $post['prenom'], 
+    $post['pseudo'], $post['adresse'], $post['email'], $post['mdp']);
+
+        var_dump($user);
+
+    $data->creerUtilisateur($user);
+    echo "Félicitation, vous vous êtes inscrit(e) avec succès !";
     }
     
 }

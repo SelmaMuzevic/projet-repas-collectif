@@ -12,16 +12,16 @@
             
             .event{
                 
-    border-radius: 40px;
-    height: 40%;
-    width: 40%;  
-    padding: 50px;   
+    border-radius: 20px;
+    width: 60%;  
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     border: 1px solid grey;
-    background-color: lightyellow;
+    background-color: lightgray;
+    box-shadow: 5px 5px 5px black;
+    overflow: auto;
 }
 
 .container{
@@ -36,7 +36,7 @@
         <h1 id="title" class="col-sm-6 col-sm-offset-4">Creation D'evenement: </h1>
         </header>
            
-            <form method ="POST" action="choix-events.php">
+            <form method ="POST" action="affiche-evenements.php">
       
             <div class="form-group">
             <div class="col-sm-4 col-sm-offset-3">

@@ -3,44 +3,47 @@
 page affichage
 -->
 <html>
-    <head>
-        <title>Site Culinaire</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+
+<head>
+    <title>Site Culinaire</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <style>
+        .box {
+            margin-top: 50px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid grey;
+            border-radius: 50px;
+            background-color: #ff9933;
+        }
         
-        <style>
-            .box{
-    margin-top: 50px;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid grey;
-    border-radius: 50px;
-    background-color: #ff9933;
-}
-img{
-    border-radius: 50px;
-    margin-top: 20px;
-    width: 100%;
-}
-        </style>
-    
-    </head>
-         <body class="container">
-            <img src="cooking2.jpeg" alt="Outils culinaires"/>
-            
-            <div class="box">
-            <header class="row">
+        img {
+            border-radius: 50px;
+            margin-top: 20px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body class="container">
+    <img src="cooking2.jpeg" alt="Outils culinaires" />
+
+    <div class="box">
+        <header class="row">
             <h1 id="title" class="col-sm-6 col-sm-offset-3"> Bienvenue sur le site culinaire ! </h1>
-            </header>
-             
-            <p class="col-sm-6 col-sm-offset-3">Si vous êtes pas encore inscrit(e), 
-            vous pouvez toujours en faire en cliquant sur <a href="inscription.php" title="inscription">ce lien</a></p>
-            <p class="col-sm-6 col-sm-offset-3">Si vous êtes déjà un membre, <a href="connexion.php" title="connexion">connectez-vous</a> sur votre espace client .</p>
-            <p class="col-sm-6 col-sm-offset-3">Pour ajouter, modifier ou supprimer un evenement, <a href="evenements.html" title="events">cliquez sur ce lien .</a></p>
-            </div>
-            </body>
+        </header>
+
+        <p class="col-sm-6 col-sm-offset-3">Si vous êtes pas encore inscrit(e), vous pouvez toujours en faire en cliquant sur <a href="inscription.php" title="inscription">ce lien</a></p>
+        <p class="col-sm-6 col-sm-offset-3">Si vous êtes déjà un membre, <a href="connexion.php" title="connexion">connectez-vous</a> sur votre espace client .</p>
+        <p class="col-sm-6 col-sm-offset-3">Pour ajouter, modifier ou supprimer un evenement, <a href="evenements.php" title="events">cliquez sur ce lien .</a></p>
+    </div>
+</body>
+
 </html>
